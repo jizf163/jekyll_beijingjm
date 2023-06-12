@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body class="body-white">
+{% include nav.html%}
+<div class="container">
+<div class="row" style="background-color: #ffffff;padding: 40px;"> 
+    {% for p in site.product %}
+    <div class="col-md-3 col-sm-3" style="margin-bottom: 50px;"> 
+        <div style="padding: 40px 40px 0 40px;"> 
+            <a href="{{site.baseurl}}{{p.url}}">
+                <img class=" center-block img-thumbnail" style="height: 140px;" src="/assets/{{p.pic}}">
+            </a> 
+        </div> 
+        <h4 class="text-center" style="height: 16px; overflow: hidden;">
+            <a href="{{site.baseurl}}{{p.url}}">
+                <span style="display: block;color: #0E0E0E; font-size: 16px; font-weight: 400;">{{p.title}}</span>
+            </a> 
+        </h4> 
+        <div style="background-color: #F8F8F8; color: #FA5437; padding: 5px; font-size: 20px;font-weight: 400"> 
+            <span style="font-size: 16px;">￥</span>{{p.price}} 
+            <del style="font-size: 14px;color:#BEBEBE; padding-left: 10px; ">￥{{p.price_old}}</del> 
+            <a href="{{site.baseurl}}{{p.url}}" class="btn btn-danger" style="padding:3px 15px;margin-top:0px;float: right;display: block;">购买</a> 
+            <div class="clear"></div> 
+        </div> 
+    </div>
+    {%endfor%}
+</div>
+</div>
+<div class="footer">
+    <div class="container">
+        {% include footer.html %}
+    </div>
+</div>
+
+<!-- /container -->
+<include file="public@scripts"/>
+<script src="{{site.baseurl}}/assets/js/slippry.min.js"></script>
+<script>
+    $(function () {
+        $("#home-slider").slippry({
+            transition: 'fade',
+            useCSS: true,
+            captions: false,
+            speed: 1000,
+            pause: 3000,
+            auto: true,
+            preload: 'visible'
+        });
+        $("#home-slider").show();
+    });
+
+
+</script>
+<hook name="before_body_end"/>
+</body>
+</html>

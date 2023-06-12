@@ -1,0 +1,93 @@
+/*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
+#backtotop{position: fixed;bottom: 50px;right:20px;display: none;cursor: pointer;font-size: 50px;z-index: 9999;}
+#backtotop:hover{color:#333}
+#main-menu-user li.user{display: none}
+body,div,ul,li{margin: 0; padding: 0; font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;!important;}
+ul,li{ list-style: none;}
+a{ text-decoration: none!important;}
+.navbar-inverse{
+    background: url(../images/innavbg.png);;
+}
+.navbar-nav>li{min-width: 126px; text-align: center;
+    background: url(../images/innavico.png) 120px 17px no-repeat;
+}
+.navbar-nav>li>a{ padding-top: 0; padding-bottom: 0; line-height: 36px;}
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+.navbar{ min-height: 41px; border: 0; margin-bottom: 0px;}
+.mainnav{z-index:999;position: fixed;;
+    display: block;
+    min-width: 96px;
+    max-width: 116px;
+    height: 100%;
+    padding: 0;
+    box-shadow: 5px -10px 20px rgba(0,0,0,0.1);
+    font: 12px/13px VWHeadWeb-Regular;}
+.mainnav>ul>li{ border-bottom: 1px solid #CCCCCC; ; text-align: center;padding: 10px 0 10px 0}
+.mainnav>ul>li>span{ display: block;}
+.indexProductList{}
+.indexProductList>ul>li{float: left; width: 20%; margin: 20px; height: 200px; background-color: #1abc9c; list-style: none;}
+.indexProductList>ul>li>img{ max-width: 100%;}
+.tc-main{ margin-top: 70px;}
+
+label, input, button, select, textarea {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.headtitle h4 {
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 0 -2px 0;
+    border-bottom: 2px solid #f90;
+}
+.headtitle {
+    display: block;
+    margin: 10px 0 25px 0;
+    border-bottom: 1px dotted #e4e9f0;
+}
+.footer ul>li{line-height: 30px;}
+.footer ul>li>h4{ padding-bottom: 10px;}
+.footer a{color: #616161!important;}
+.mainnav a{color: #616161!important;}
+.article_menu>li{ padding: 5px 0 5px 0;}
+.article_menu a{color: #757575}
+.article_menu .checked a{ color: #ff6700}
+.buyCount{padding: 20px 0 20px 0;}
+.buyCount span{ float: left; display: block;padding-right: 20px}
+.goodsCount{ border: 1px #CCC solid;float: left;    font-family: arial;    font-size: 13px;    padding: 0;    text-align: center;    width: 40px;height: 30px;    line-height: 30px;    margin-left: -1px;    vertical-align: middle;;}
+.decrement,.increment{text-decoration:none!important; display: block;float: left;    border: 1px solid #CCC;    height: 30px;    line-height: 30px;    margin-left: -1px;    vertical-align: middle; text-align: center;width: 30px;}
+.u-bank-alipay{ display: block;  background: url('../images/bank-logo.gif') 10px -1098px; width: 120px; height: 33px; border: 1px solid #e33d29;}
+.u-bank-weixin{ display: block;  background: url('../images/bank-logo.gif') 10px -942px; width: 120px; height: 33px; border: 1px solid #e33d29;}
+.u-bank-unionpay{ display: block;  background: url('../images/bank-logo.gif') 10px -911px; width: 120px; height: 33px; border: 1px solid #e33d29;}
+
+.bank{ border: 1px solid #eeeeee;}
+
+@media (min-width: 992px) {
+    .col-md-1-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.col-md-1-5 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+.productDetail img{max-width: 100%; text-align: center;}
+.pagination
+
+
+.clear{ zoom:1;}
+.clear:after{content:""; clear:both; display:block;}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #0673B8;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    background-color: #0673B8;
+}
+.productBg{ background: url('../images/pic02.jpg') center top no-repeat; background-color: #86AD43;}

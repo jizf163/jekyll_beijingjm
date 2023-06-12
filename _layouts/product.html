@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body class="body-white">
+{% include nav.html%}
+
+<div style="background-color: #f5f5f5; padding: 30px 0 30px 0;"> 
+    <div class="container"> 
+        <div class="row" style="background-color: #FFFFFF;  border-bottom: 1px solid #e0e0e0;"> 
+            <div class="col-md-5 col-sm-5"> 
+                <div> 
+                    <img class=" center-block" style="max-width: 100%;" src="{{site.baseurl}}/assets/{{page.pic}}"> 
+                </div> 
+            </div> 
+            <div class="col-md-7 col-sm-7"> 
+                <div style="padding: 10px;"> 
+                    <span style="display: block;color: #0E0E0E; font-size: 28px; font-weight: 400;">{{page.title}}</span> 
+                    <div style="height: 80px; overflow: hidden;color: #FA5437; padding: 10px 0 10px 0;"></div> 
+                    <form action="" method="post" class="form-horizontal" role="form"> 
+                        <input type="hidden" name="goodsid" value="29"> 
+                        <div class="buyCount"> 
+                            <span style="margin-top:6px">数量</span> 
+                            <div class="gcIpt" data-monitor="goodsdetails_number_click"> 
+                                <a href="javascript:jian();" class="decrement disabled" data-num="-1">-</a> 
+                                <input type="text" id="fenshu" class="goodsCount" value="1" name="fenshu" readonly=""> 
+                                <a href="javascript:add();" class="increment" data-num="1">+</a> 
+                                <div class="clear"></div> 
+                            </div> 
+                        </div> 
+                        <div style="background-color: #F8F8F8; color: #FA5437; padding: 10px; font-size: 36px;font-weight: 400">
+                            <span style="font-size: 30px;">￥</span>{{page.price}}<del style="font-size: 14px;color:#BEBEBE; padding-left: 30px; ">￥{{page.price_old}}</del>
+                        </div> 
+                        <input type="button" class="btn btn-danger btn-lg" value="立刻购买"> 
+                    </form> 
+                    <div class="row text-center" style=" color: #616161!important; padding: 20px 0 20px 0;"> 
+                        <div class="col-md-3 col-sm-3 h5 " style="border-right: 1px solid #e0e0e0">
+                            <span class="glyphicon glyphicon-time"></span> 7天无理由退换货
+                        </div> 
+                        <div class="col-md-3 col-sm-3 h5" style="border-right: 1px solid #e0e0e0">
+                            <span class="glyphicon glyphicon-dashboard"></span> 14天免费换货
+                        </div> 
+                        <div class="col-md-3 col-sm-3 h5" style="border-right: 1px solid #e0e0e0">
+                            <span class="glyphicon glyphicon-gift"></span> 满150包邮
+                        </div> 
+                        <div class="col-md-3 col-sm-3 h5" style="">
+                            <span class="glyphicon glyphicon-map-marker"></span> 520余家售后网点
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="row" style="background-color: #FFFFFF"> 
+            <div class="col-md-1 col-sm-1"></div> 
+            <div class="col-md-11 col-sm-11"> 
+                <div style="padding: 40px;"> 
+                    <h2 style="border-bottom: 1px solid #b0b0b0; color: #b0b0b0; padding: 0px 0 20px 0;">{{page.title}}}</h2> 
+                    <div style="padding: 10px;" class="productDetail"><p><br></p>
+                        <p>{{page.detail}}</p>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+<div class="footer">
+    <div class="container">
+        {% include footer.html %}
+    </div>
+</div>
+
+<!-- /container -->
+<include file="public@scripts"/>
+<script src="{{site.baseurl}}/assets/js/slippry.min.js"></script>
+<script>
+    $(function () {
+        $("#home-slider").slippry({
+            transition: 'fade',
+            useCSS: true,
+            captions: false,
+            speed: 1000,
+            pause: 3000,
+            auto: true,
+            preload: 'visible'
+        });
+        $("#home-slider").show();
+    });
+
+
+</script>
+<hook name="before_body_end"/>
+</body>
+</html>
