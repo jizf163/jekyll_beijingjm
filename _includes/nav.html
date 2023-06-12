@@ -37,10 +37,11 @@
                       <li><a href="{{site.baseurl}}/tech/04.html">产品领域展示</a></li>
                   </ul>
               </li>
-              <li class="dropdown2  product">
-                  <a href="{{site.baseurl}}/list.html" class="dropdown-toggle" >产品中心<span class="caret"></span></a>
+              <li class="dropdown product">
+                  <a href="#" class="dropdown-toggle"  data-toggle="dropdown">产品中心<span class="caret"></span></a>
                   
                   <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{site.baseurl}}/list.html">产品列表</a></li>
                     {% for p in site.product %}
                           <li><a href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
                     {%endfor%}
@@ -48,42 +49,14 @@
                   </ul>
               </li>
               <li class="fuwuanli visible-lg-block"><a href="{{site.baseurl}}/anli/01.html">服务案例</a></li>
-              <li class="dropdown news visible-lg-block">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻资讯<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                      <li><a href="{:U('Portal/list/index',array('id'=>7))}">企业资讯</a></li>
-                      <li><a href="{:U('Portal/list/index',array('id'=>8))}">行业资讯</a></li>
-                      <li><a href="{:U('Portal/list/index',array('id'=>14))}">媒体动态</a></li>
-                  </ul>
-              </li>
+              
 
-              <!--<li class="{$hezuoshenqing}"><a href="{:U('Portal/article/index',array('id'=>24,'cid'=>12))}" >代理申请</a></li>-->
-              <li class="visible-lg-block"><a href="{:U('Portal/map/index')}" >经销商查询</a></li>
+              <li class="{$hezuoshenqing}"><a href="{{site.baseurl}}/about/jiameng.html" >代理申请</a></li>
+              <!-- <li class="visible-lg-block"><a href="{:U('Portal/map/index')}" >经销商查询</a></li> -->
           </ul>
 
 
-          <ul class="nav navbar-nav navbar-right visible-lg-block" id="main-menu-user">
-              <li class="dropdown user login">
-                  <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-                      <img src="{{site.baseurl}}/assets/images/headicon.png" class="headicon" style="padding-right: 20px;"/>
-                      <span class="user-nicename"></span><b class="caret"></b></a>
-                  <ul class="dropdown-menu pull-right">
-                      <li><a href="{:U('user/center/index')}"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
-                      <li class="divider"></li>
-                      <li><a href="{:U('user/index/logout')}"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown user offline">
-                  <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-                      <span class="glyphicon glyphicon-user" style="padding-right: 20px;"></span> 登录<b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu pull-right">
-                      <li><a href="{:leuu('user/login/index')}"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
-                      <li class="divider"></li>
-                      <li><a href="{:leuu('user/register/index')}"><i class="fa fa-user"></i> &nbsp;注册</a></li>
-                  </ul>
-              </li>
-          </ul>
+          
       </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

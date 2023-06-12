@@ -33,7 +33,11 @@
             </div>
         </div>
         <div class="col-md-3">
+            {% if page.category == "关于我们" %}
             {% include nav_about.html %}
+            {% else%}
+            {% include nav_tech.html %}
+            {% endif %}
         </div>
     </div>
 </div>
