@@ -6,7 +6,7 @@
 <body class="body-white">
 {% include nav.html%}
 <div style="width: 100%">
-    <img style="width:100%" src="{{site.baseurl}}/assets/images/banner01.jpg" alt="">
+    <img style="width:100%" src="{{site.imgurl}}/assets/images/banner01.jpg" alt="">
 </div>
 <div class="container">
     <h2>{{page.title}}</h2>
@@ -21,7 +21,7 @@
                 
                 <div id="article_content" style="line-height: 30px;">
                     {% if page.pic %}
-                        <img src="{{site.baseurl}}{{page.pic}}" style="padding-bottom: 30px;"/>
+                        <img src="{{site.imgurl}}{{page.pic}}" style="padding-bottom: 30px;"/>
                     {%endif%}
                     <div>{{page.detail}}</div>
                     
@@ -39,7 +39,7 @@
             {% include nav_tech.html %}
             {% endif %}
             <div style="margin-top: 20px;"> 
-                <img class=" center-block img-thumbnail" src="{{site.baseurl}}/assets/images/kefu.jpg"> 
+                <img class=" center-block img-thumbnail" src="{{site.imgurl}}/assets/images/kefu.jpg"> 
             </div>
         </div>
     </div>
